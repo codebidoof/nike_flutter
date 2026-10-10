@@ -16,11 +16,19 @@ abstract final class AppColors {
   static const Color bgDefault = ColorPrimitives.white;
   static const Color bgSubtle = ColorPrimitives.gray50;
   static const Color bgPlaceholder = ColorPrimitives.gray250;
+  static const Color bgInverse = ColorPrimitives.black;
 
   // Border
   static const Color borderDefault = ColorPrimitives.gray200;
   static const Color borderStrong = ColorPrimitives.black;
+  static const Color borderSubtle = ColorPrimitives.gray300;
 
   // Icon
+  static const Color iconPrimary = ColorPrimitives.black;
+  static const Color iconSystem = ColorPrimitives.systemGray;
   static const Color iconWishActive = ColorPrimitives.red500;
+
+  // Indicator
+  static const Color indicatorTrack = ColorPrimitives.gray300;
+  static const Color indicatorActive = ColorPrimitives.gray700;
 }
