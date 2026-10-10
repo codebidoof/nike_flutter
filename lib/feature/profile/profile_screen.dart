@@ -5,10 +5,6 @@ class ProfileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text('프로필 화면'),
-      ),
-    );
+    return const Center(child: Text('프로필 화면'));
   }
 }

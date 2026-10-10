@@ -5,10 +5,6 @@ class WishScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text('위시리스트 화면'),
-      ),
-    );
+    return const Center(child: Text('위시리스트 화면'));
   }
 }

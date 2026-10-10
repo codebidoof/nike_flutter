@@ -4,7 +4,6 @@ import 'package:flutter/services.dart' hide SystemUiOverlay;
 import 'app/app_router.dart';
 import 'app/system_ui_overlay.dart';
 import 'core/designsystem/app_theme.dart';
-import 'feature/home/screen/home_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();

@@ -22,7 +22,9 @@ final GoRouter router = GoRouter(
             if (!didPop) navigationShell.goBranch(0);
           },
           child: Padding(
-            padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewPadding.bottom),
+            padding: EdgeInsets.only(
+              bottom: MediaQuery.of(context).viewPadding.bottom,
+            ),
             child: Scaffold(
               body: navigationShell,
               bottomNavigationBar: BottomBar(

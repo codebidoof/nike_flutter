@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
-import '../core/designsystem/app_spacing.dart';
+import 'bottom_bar_child.dart';
 import 'bottom_bar_item.dart';
 
 class BottomBar extends StatelessWidget {
@@ -36,22 +35,14 @@ class BottomBar extends StatelessWidget {
             crossAxisAlignment: .stretch,
             children: [
               for (final (index, item) in tabs.indexed)
-                GestureDetector(
-                  behavior: HitTestBehavior.opaque,
-                  onTap: () => onTap(index),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                      vertical: _verticalPadding,
-                      horizontal: _hitSlop,
-                    ),
-                    child: Column(
-                      spacing: AppSpacing.iconLabelGap,
-                      children: [
-                        SvgPicture.asset(item.iconPath),
-                        Text(item.label, style: theme.textTheme.labelSmall),
-                      ],
-                    ),
-                  ),
+                BottomBarChild(
+                  onTap: onTap,
+                  index: index,
+                  isSelected: index == currentIndex,
+                  verticalPadding: _verticalPadding,
+                  hitSlop: _hitSlop,
+                  item: item,
+                  theme: theme,
                 ),
             ],
           ),
