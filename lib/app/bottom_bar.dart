@@ -16,6 +16,9 @@ class BottomBar extends StatelessWidget {
   static const double _verticalPadding = 8;
   static const double _horizontalPadding = 34;
 
+  // 아이템 좌우로 넓히는 터치 영역. 바 좌우 패딩에서 같은 값을 빼서 보이는 배치는 그대로 둔다
+  static const double _hitSlop = 10;
+
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -26,23 +29,28 @@ class BottomBar extends StatelessWidget {
         height: _height,
         child: Padding(
           padding: const EdgeInsets.symmetric(
-            vertical: _verticalPadding,
-            horizontal: _horizontalPadding,
+            horizontal: _horizontalPadding - _hitSlop,
           ),
           child: Row(
             mainAxisAlignment: .spaceBetween,
-            crossAxisAlignment: .start,
+            crossAxisAlignment: .stretch,
             children: [
               for (final (index, item) in tabs.indexed)
                 GestureDetector(
+                  behavior: HitTestBehavior.opaque,
                   onTap: () => onTap(index),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    spacing: AppSpacing.iconLabelGap,
-                    children: [
-                      SvgPicture.asset(item.iconPath),
-                      Text(item.label, style: theme.textTheme.labelSmall),
-                    ],
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(
+                      vertical: _verticalPadding,
+                      horizontal: _hitSlop,
+                    ),
+                    child: Column(
+                      spacing: AppSpacing.iconLabelGap,
+                      children: [
+                        SvgPicture.asset(item.iconPath),
+                        Text(item.label, style: theme.textTheme.labelSmall),
+                      ],
+                    ),
                   ),
                 ),
             ],

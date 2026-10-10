@@ -3,7 +3,7 @@ import 'package:flutter/services.dart' hide SystemUiOverlay;
 
 /// 상태바와 내비게이션 바 영역을 [surface] 색으로 맞춰주는 위젯.
 ///
-/// 시스템 바 자체는 투명하게 두고, 바 뒤 영역([viewPadding]의 top/bottom 높이)에
+/// 시스템 바 자체는 투명하게 두고, 바 뒤 영역([viewPadding]의 bottom 높이)에
 /// [surface] 색 띠를 직접 그린다. Android 15(API 35)+에서는 시스템 바 색상 지정이
 /// 무시되므로, 모든 버전에서 동일하게 보이도록 이 방식을 쓴다.
 ///
@@ -60,7 +60,7 @@ class SystemUiOverlay extends StatelessWidget {
             left: 0,
             right: 0,
             height: viewPadding.top,
-            child: ColoredBox(color: surface),
+            child: ColoredBox(color: Colors.transparent),
           ),
           Positioned(
             bottom: 0,

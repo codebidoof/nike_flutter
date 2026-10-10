@@ -15,15 +15,23 @@ final GoRouter router = GoRouter(
     // 탭마다 독립된 네비게이션 스택을 유지 (탭 전환 시 상태 보존)
     StatefulShellRoute.indexedStack(
       builder: (context, state, navigationShell) {
-        return Padding(
-          padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewPadding.bottom),
-          child: Scaffold(
-            body: navigationShell,
-            bottomNavigationBar: BottomBar(
-              currentIndex: navigationShell.currentIndex,
-              onTap: (index) => navigationShell.goBranch(
-                index,
-                initialLocation: index == navigationShell.currentIndex,
+        // 탭 전환은 뒤로가기 스택에 쌓이지 않으므로, 홈이 아닌 탭에서는 종료 대신 홈 탭으로 보낸다
+        return PopScope(
+          canPop: navigationShell.currentIndex == 0,
+          onPopInvokedWithResult: (didPop, result) {
+            if (!didPop) navigationShell.goBranch(0);
+          },
+          child: Padding(
+            padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewPadding.bottom),
+            child: Scaffold(
+              body: navigationShell,
+              bottomNavigationBar: BottomBar(
+                currentIndex: navigationShell.currentIndex,
+                // 현재 탭을 다시 누르면 해당 탭의 초기 경로로 돌아감.
+                onTap: (index) => navigationShell.goBranch(
+                  index,
+                  initialLocation: index == navigationShell.currentIndex,
+                ),
               ),
             ),
           ),
