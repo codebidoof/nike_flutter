@@ -29,8 +29,8 @@ class AppTheme {
     onSecondary: AppColors.textInverse,
     error: AppColors.iconWishActive,
     onError: AppColors.textInverse,
-    surface: AppColors.textPrimary,
-    onSurface: Color(0x00000000),
+    surface: AppColors.bgDefault,
+    onSurface: AppColors.textPrimary,
   );
 
   static const TextTheme _textTheme = TextTheme(
