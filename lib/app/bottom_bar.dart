@@ -11,9 +11,10 @@ class BottomBar extends StatelessWidget {
   final ValueChanged<int> onTap;
   static const tabs = BottomBarItem.values;
 
-  // design.pen의 Navigation bar 기준: 높이 61, 상하 패딩 8
+  // design.pen의 Navigation bar 기준: 높이 61, 상하 패딩 8, 좌우 여백 34
   static const double _height = 61;
   static const double _verticalPadding = 8;
+  static const double _horizontalPadding = 34;
 
   @override
   Widget build(BuildContext context) {
@@ -24,11 +25,13 @@ class BottomBar extends StatelessWidget {
       child: SizedBox(
         height: _height,
         child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: _verticalPadding),
+          padding: const EdgeInsets.symmetric(
+            vertical: _verticalPadding,
+            horizontal: _horizontalPadding,
+          ),
           child: Row(
-            mainAxisAlignment: .center,
+            mainAxisAlignment: .spaceBetween,
             crossAxisAlignment: .start,
-            spacing: AppSpacing.navItemGap,
             children: [
               for (final (index, item) in tabs.indexed)
                 GestureDetector(
