@@ -31,4 +31,7 @@ abstract final class AppColors {
   // Indicator
   static const Color indicatorTrack = ColorPrimitives.gray300;
   static const Color indicatorActive = ColorPrimitives.gray700;
+
+  // Effect
+  static const Color shadow = ColorPrimitives.shadow;
 }
