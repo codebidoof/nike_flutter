@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../core/designsystem/cta_button.dart';
 
@@ -24,7 +25,10 @@ class BagScreen extends StatelessWidget {
           alignment: .bottomCenter,
           child: Padding(
             padding: EdgeInsets.only(left: 40, right: 40, bottom: 22),
-            child: CtaButton(label: '주문하기', onPressed: () {}),
+            child: CtaButton(
+              label: '주문하기',
+              onPressed: () => context.go('/buy'),
+            ),
           ),
         ),
       ],

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../core/designsystem/app_colors.dart';
+import '../../../core/designsystem/app_colors.dart';
+import 'new_product_item.dart';
 
 class NewSection extends StatelessWidget {
   const NewSection({super.key});
@@ -19,6 +20,7 @@ class NewSection extends StatelessWidget {
             style: Theme.of(context).textTheme.titleLarge
                 ?.copyWith(color: AppColors.textSecondary),
           ),
+          SizedBox(height: 22),
         ],
       ),
     );

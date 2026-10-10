@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:nike_flutter/feature/home/new_section.dart';
-import 'package:nike_flutter/feature/home/top_section.dart';
+import 'package:nike_flutter/feature/home/widgets/new_section.dart';
+import 'package:nike_flutter/feature/home/widgets/top_section.dart';
+
+import '../widgets/new_product_item.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -23,6 +25,18 @@ class HomeScreen extends StatelessWidget {
             Image.asset("assets/images/home_banner.png"),
             SizedBox(height: 41),
             NewSection(),
+            SizedBox(
+              width: 314,
+              height: 384,
+              child: ListView.separated(
+                separatorBuilder: (context, index) => SizedBox(width: 3),
+                scrollDirection: .horizontal,
+                itemBuilder: (BuildContext context, int index) {
+                  return NewProductItem();
+                },
+                itemCount: 2,
+              ),
+            ),
           ],
         ),
       ),
