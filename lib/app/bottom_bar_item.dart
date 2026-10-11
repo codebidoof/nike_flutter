@@ -1,4 +1,3 @@
-
 enum BottomBarItem {
   home(iconPath: 'assets/svg/ic_nav_home.svg', label: '홈'),
   buy(iconPath: 'assets/svg/ic_nav_shop.svg', label: '구매하기'),

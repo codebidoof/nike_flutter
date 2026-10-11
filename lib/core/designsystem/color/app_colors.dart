@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 /// Layer 2: 시맨틱 색상 토큰.
 ///
-/// ThemeData.extensions에 등록되며, 위젯은 `context.colors.xxx`로 접근한다.
+/// ThemeData.extensions에 등록되며, 위젯은 `context.appColor.xxx`로 접근한다.
 /// 값은 ColorPrimitives를 참조할 것.
 @immutable
 class AppThemeExtension extends ThemeExtension<AppThemeExtension> {
@@ -122,8 +122,9 @@ class AppThemeExtension extends ThemeExtension<AppThemeExtension> {
   }
 }
 
-extension AppColorsContext on BuildContext {
+extension BuildContextThemeExt on BuildContext {
+  ThemeData get theme => Theme.of(this);
+
   /// 현재 테마에 등록된 시맨틱 색상 토큰.
-  AppThemeExtension get colors =>
-      Theme.of(this).extension<AppThemeExtension>()!;
+  AppThemeExtension get appColor => theme.extension<AppThemeExtension>()!;
 }

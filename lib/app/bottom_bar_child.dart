@@ -28,7 +28,7 @@ class BottomBarChild extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // 선택된 탭은 라벨만 Bold + textPrimary, 아이콘은 그대로
-    final colors = context.colors;
+    final colors = context.appColor;
     final labelStyle = isSelected
         ? theme.textTheme.labelSmall?.copyWith(
             fontWeight: FontWeight.bold,

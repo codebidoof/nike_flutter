@@ -18,7 +18,7 @@ class NewSection extends StatelessWidget {
           Text(
             "나이키 최신 상품",
             style: Theme.of(context).textTheme.titleLarge
-                ?.copyWith(color: context.colors.textSecondary),
+                ?.copyWith(color: context.appColor.textSecondary),
           ),
           SizedBox(height: 22),
         ],

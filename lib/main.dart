@@ -32,7 +32,7 @@ class _MyAppState extends State<MyApp> {
       routerConfig: router,
       // MaterialApp이 빌드마다 기본 SystemUiOverlayStyle을 덮어쓰므로 위젯 트리에서 지정
       builder: (context, child) {
-        final surface = context.colors.bgDefault;
+        final surface = context.appColor.bgDefault;
         final viewPadding = MediaQuery.viewPaddingOf(context);
         final iconBrightness =
             ThemeData.estimateBrightnessForColor(surface) == Brightness.dark

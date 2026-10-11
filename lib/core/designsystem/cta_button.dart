@@ -18,7 +18,7 @@ class CtaButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final colors = context.colors;
+    final colors = context.appColor;
 
     return FilledButton(
       onPressed: onPressed,

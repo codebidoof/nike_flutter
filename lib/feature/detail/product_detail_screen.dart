@@ -5,10 +5,6 @@ class ProductDetailScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text('상품 상세 화면'),
-      ),
-    );
+    return const Scaffold(body: Center(child: Text('상품 상세 화면')));
   }
 }

@@ -16,7 +16,7 @@ class TopSection extends StatelessWidget {
           Text(
             "9월 4일 목요일",
             style: Theme.of(context).textTheme.titleSmall
-                ?.copyWith(color: context.colors.textSecondary),
+                ?.copyWith(color: context.appColor.textSecondary),
           ),
         ],
       ),

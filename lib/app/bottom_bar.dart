@@ -24,7 +24,7 @@ class BottomBar extends StatelessWidget {
     final theme = Theme.of(context);
 
     return ColoredBox(
-      color: context.colors.bgDefault,
+      color: context.appColor.bgDefault,
       child: SizedBox(
         height: _height,
         child: Padding(
