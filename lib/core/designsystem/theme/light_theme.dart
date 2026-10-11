@@ -2,7 +2,7 @@ import '../color/app_colors.dart';
 import '../tokens/color_primitives.dart';
 
 /// 라이트 테마 색상.
-class LightTheme extends AppColors {
+class LightTheme extends AppThemeExtension {
   const LightTheme({
     super.textPrimary = ColorPrimitives.black,
     super.textSecondary = ColorPrimitives.gray500,

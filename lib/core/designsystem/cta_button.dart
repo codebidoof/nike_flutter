@@ -32,9 +32,7 @@ class CtaButton extends StatelessWidget {
       ),
       child: Text(
         label,
-        style: theme.textTheme.labelLarge?.copyWith(
-          color: colors.textInverse,
-        ),
+        style: theme.textTheme.labelLarge?.copyWith(color: colors.textInverse),
       ),
     );
   }

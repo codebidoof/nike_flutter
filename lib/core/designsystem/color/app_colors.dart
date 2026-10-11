@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 /// ThemeData.extensions에 등록되며, 위젯은 `context.colors.xxx`로 접근한다.
 /// 값은 ColorPrimitives를 참조할 것.
 @immutable
-class AppColors extends ThemeExtension<AppColors> {
-  const AppColors({
+class AppThemeExtension extends ThemeExtension<AppThemeExtension> {
+  const AppThemeExtension({
     required this.textPrimary,
     required this.textSecondary,
     required this.textInverse,
@@ -56,7 +56,7 @@ class AppColors extends ThemeExtension<AppColors> {
   final Color shadow;
 
   @override
-  AppColors copyWith({
+  AppThemeExtension copyWith({
     Color? textPrimary,
     Color? textSecondary,
     Color? textInverse,
@@ -75,7 +75,7 @@ class AppColors extends ThemeExtension<AppColors> {
     Color? indicatorActive,
     Color? shadow,
   }) {
-    return AppColors(
+    return AppThemeExtension(
       textPrimary: textPrimary ?? this.textPrimary,
       textSecondary: textSecondary ?? this.textSecondary,
       textInverse: textInverse ?? this.textInverse,
@@ -97,10 +97,10 @@ class AppColors extends ThemeExtension<AppColors> {
   }
 
   @override
-  AppColors lerp(AppColors? other, double t) {
+  AppThemeExtension lerp(AppThemeExtension? other, double t) {
     if (other == null) return this;
 
-    return AppColors(
+    return AppThemeExtension(
       textPrimary: Color.lerp(textPrimary, other.textPrimary, t)!,
       textSecondary: Color.lerp(textSecondary, other.textSecondary, t)!,
       textInverse: Color.lerp(textInverse, other.textInverse, t)!,
@@ -124,5 +124,6 @@ class AppColors extends ThemeExtension<AppColors> {
 
 extension AppColorsContext on BuildContext {
   /// 현재 테마에 등록된 시맨틱 색상 토큰.
-  AppColors get colors => Theme.of(this).extension<AppColors>()!;
+  AppThemeExtension get colors =>
+      Theme.of(this).extension<AppThemeExtension>()!;
 }
