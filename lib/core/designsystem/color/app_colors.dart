@@ -124,7 +124,5 @@ class AppThemeExtension extends ThemeExtension<AppThemeExtension> {
 
 extension BuildContextThemeExt on BuildContext {
   ThemeData get theme => Theme.of(this);
-
-  /// 현재 테마에 등록된 시맨틱 색상 토큰.
   AppThemeExtension get appColor => theme.extension<AppThemeExtension>()!;
 }

@@ -17,14 +17,11 @@ class CtaButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
-    final colors = context.appColor;
-
     return FilledButton(
       onPressed: onPressed,
       style: FilledButton.styleFrom(
-        backgroundColor: colors.bgInverse,
-        foregroundColor: colors.textInverse,
+        backgroundColor: context.appColor.bgInverse,
+        foregroundColor: context.appColor.textInverse,
         minimumSize: const Size.fromHeight(_height),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(AppSpacing.ctaButtonRadius),
@@ -32,7 +29,9 @@ class CtaButton extends StatelessWidget {
       ),
       child: Text(
         label,
-        style: theme.textTheme.labelLarge?.copyWith(color: colors.textInverse),
+        style: context.theme.textTheme.labelLarge?.copyWith(
+          color: context.appColor.textInverse,
+        ),
       ),
     );
   }

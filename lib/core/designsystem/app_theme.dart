@@ -8,25 +8,25 @@ import 'theme/light_theme.dart';
 class AppTheme {
   const AppTheme._();
 
-  static ThemeData get light => _theme(Brightness.light, const LightTheme());
-
+  /// [main.dart]의 루트 위젯 MaterialApp에서 참조할 ThemeData 변수
   /// 다크 토큰이 분리되기 전까지는 brightness도 light로 둔다.
+  static ThemeData get light => _theme(Brightness.light, const LightTheme());
   static ThemeData get dark => _theme(Brightness.light, const DarkTheme());
 
   /// ColorScheme은 Material 위젯 기본값용으로만 두고, 앱 색상은 [AppThemeExtension]를 쓴다.
-  static ThemeData _theme(Brightness brightness, AppThemeExtension colors) =>
+  static ThemeData _theme(Brightness brightness, AppThemeExtension ext) =>
       ThemeData(
         useMaterial3: true,
         colorScheme: ColorScheme.fromSeed(
-          seedColor: colors.bgInverse,
+          seedColor: ext.bgInverse,
           brightness: brightness,
         ),
         textTheme: _textTheme.apply(
-          bodyColor: colors.textPrimary,
-          displayColor: colors.textPrimary,
+          bodyColor: ext.textPrimary,
+          displayColor: ext.textPrimary,
         ),
-        scaffoldBackgroundColor: colors.bgDefault,
-        extensions: [colors],
+        scaffoldBackgroundColor: ext.bgDefault,
+        extensions: [ext],
       );
 
   static const TextTheme _textTheme = TextTheme(

@@ -21,8 +21,6 @@ class BottomBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
-
     return ColoredBox(
       color: context.appColor.bgDefault,
       child: SizedBox(
@@ -43,7 +41,6 @@ class BottomBar extends StatelessWidget {
                   verticalPadding: _verticalPadding,
                   hitSlop: _hitSlop,
                   item: item,
-                  theme: theme,
                 ),
             ],
           ),

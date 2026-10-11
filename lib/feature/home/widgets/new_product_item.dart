@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
+import '../../../core/designsystem/color/app_colors.dart';
+
 class NewProductItem extends StatelessWidget {
   const NewProductItem({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
-
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -17,9 +17,12 @@ class NewProductItem extends StatelessWidget {
           fit: .cover,
         ),
         SizedBox(height: 20),
-        Text("Nike Air Force 1 '07", style: theme.textTheme.titleMedium),
+        Text(
+          "Nike Air Force 1 '07",
+          style: context.theme.textTheme.titleMedium,
+        ),
         SizedBox(height: 16),
-        Text("US\$100", style: theme.textTheme.bodySmall),
+        Text("US\$100", style: context.theme.textTheme.bodySmall),
       ],
     );
   }

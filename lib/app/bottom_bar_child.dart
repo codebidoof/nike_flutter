@@ -14,7 +14,6 @@ class BottomBarChild extends StatelessWidget {
     required this.verticalPadding,
     required this.hitSlop,
     required this.item,
-    required this.theme,
   });
 
   final ValueChanged<int> onTap;
@@ -23,18 +22,18 @@ class BottomBarChild extends StatelessWidget {
   final double verticalPadding;
   final double hitSlop;
   final BottomBarItem item;
-  final ThemeData theme;
 
   @override
   Widget build(BuildContext context) {
     // 선택된 탭은 라벨만 Bold + textPrimary, 아이콘은 그대로
-    final colors = context.appColor;
     final labelStyle = isSelected
-        ? theme.textTheme.labelSmall?.copyWith(
+        ? context.theme.textTheme.labelSmall?.copyWith(
             fontWeight: FontWeight.bold,
-            color: colors.textPrimary,
+            color: context.appColor.textPrimary,
           )
-        : theme.textTheme.labelSmall?.copyWith(color: colors.textSecondary);
+        : context.theme.textTheme.labelSmall?.copyWith(
+            color: context.appColor.textSecondary,
+          );
 
     return GestureDetector(
       behavior: HitTestBehavior.opaque,
