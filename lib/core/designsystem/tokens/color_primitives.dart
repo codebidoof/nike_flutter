@@ -2,7 +2,7 @@ import 'package:flutter/painting.dart';
 
 /// Layer 1: 원시 색상 팔레트.
 ///
-/// 값 변경 시 이 파일 → AppThemeExtension(semantic) → ThemeData 순으로 자동 연동.
+/// 값 변경 시 이 파일 → AppColors(semantic) → ThemeData 순으로 자동 연동.
 /// 위젯이 이 클래스를 직접 참조하는 것을 금지한다. `context.appColor`를 경유할 것.
 abstract final class ColorPrimitives {
   // Base

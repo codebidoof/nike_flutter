@@ -11,11 +11,11 @@ class TopSection extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text("Discover", style: context.theme.textTheme.headlineMedium),
+          Text("Discover", style: context.appText.titleL),
           SizedBox(height: 10),
           Text(
             "9월 4일 목요일",
-            style: context.theme.textTheme.titleSmall?.copyWith(
+            style: context.appText.tab.copyWith(
               color: context.appColor.textSecondary,
             ),
           ),

@@ -17,12 +17,9 @@ class NewProductItem extends StatelessWidget {
           fit: .cover,
         ),
         SizedBox(height: 20),
-        Text(
-          "Nike Air Force 1 '07",
-          style: context.theme.textTheme.titleMedium,
-        ),
+        Text("Nike Air Force 1 '07", style: context.appText.subtitle),
         SizedBox(height: 16),
-        Text("US\$100", style: context.theme.textTheme.bodySmall),
+        Text("US\$100", style: context.appText.caption),
       ],
     );
   }

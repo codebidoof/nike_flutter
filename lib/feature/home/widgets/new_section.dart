@@ -13,11 +13,11 @@ class NewSection extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text("What's new", style: context.theme.textTheme.titleMedium),
+          Text("What's new", style: context.appText.subtitle),
           SizedBox(height: 10),
           Text(
             "나이키 최신 상품",
-            style: context.theme.textTheme.titleLarge?.copyWith(
+            style: context.appText.titleM.copyWith(
               color: context.appColor.textSecondary,
             ),
           ),

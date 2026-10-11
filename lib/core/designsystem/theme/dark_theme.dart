@@ -4,7 +4,7 @@ import '../tokens/color_primitives.dart';
 /// 다크 테마 색상.
 ///
 /// W1에서는 light와 동일한 값으로 유지. 다크 토큰 분리는 추후 진행.
-class DarkTheme extends AppThemeExtension {
+class DarkTheme extends AppColors {
   const DarkTheme({
     super.textPrimary = ColorPrimitives.black,
     super.textSecondary = ColorPrimitives.gray500,

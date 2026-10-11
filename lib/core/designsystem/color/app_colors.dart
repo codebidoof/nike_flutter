@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 
+import '../typography/app_typography.dart';
+
 /// Layer 2: 시맨틱 색상 토큰.
 ///
 /// ThemeData.extensions에 등록되며, 위젯은 `context.appColor.xxx`로 접근한다.
 /// 값은 ColorPrimitives를 참조할 것.
 @immutable
-class AppThemeExtension extends ThemeExtension<AppThemeExtension> {
-  const AppThemeExtension({
+class AppColors extends ThemeExtension<AppColors> {
+  const AppColors({
     required this.textPrimary,
     required this.textSecondary,
     required this.textInverse,
@@ -56,7 +58,7 @@ class AppThemeExtension extends ThemeExtension<AppThemeExtension> {
   final Color shadow;
 
   @override
-  AppThemeExtension copyWith({
+  AppColors copyWith({
     Color? textPrimary,
     Color? textSecondary,
     Color? textInverse,
@@ -75,7 +77,7 @@ class AppThemeExtension extends ThemeExtension<AppThemeExtension> {
     Color? indicatorActive,
     Color? shadow,
   }) {
-    return AppThemeExtension(
+    return AppColors(
       textPrimary: textPrimary ?? this.textPrimary,
       textSecondary: textSecondary ?? this.textSecondary,
       textInverse: textInverse ?? this.textInverse,
@@ -97,10 +99,10 @@ class AppThemeExtension extends ThemeExtension<AppThemeExtension> {
   }
 
   @override
-  AppThemeExtension lerp(AppThemeExtension? other, double t) {
+  AppColors lerp(AppColors? other, double t) {
     if (other == null) return this;
 
-    return AppThemeExtension(
+    return AppColors(
       textPrimary: Color.lerp(textPrimary, other.textPrimary, t)!,
       textSecondary: Color.lerp(textSecondary, other.textSecondary, t)!,
       textInverse: Color.lerp(textInverse, other.textInverse, t)!,
@@ -124,5 +126,6 @@ class AppThemeExtension extends ThemeExtension<AppThemeExtension> {
 
 extension BuildContextThemeExt on BuildContext {
   ThemeData get theme => Theme.of(this);
-  AppThemeExtension get appColor => theme.extension<AppThemeExtension>()!;
+  AppColors get appColor => theme.extension<AppColors>()!;
+  AppTypography get appText => theme.extension<AppTypography>()!;
 }
