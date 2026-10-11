@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nike_flutter/core/designsystem/app_colors.dart';
+import 'package:nike_flutter/core/designsystem/color/app_colors.dart';
 
 class TopSection extends StatelessWidget {
   const TopSection({super.key});
@@ -16,7 +16,7 @@ class TopSection extends StatelessWidget {
           Text(
             "9월 4일 목요일",
             style: Theme.of(context).textTheme.titleSmall
-                ?.copyWith(color: AppColors.textSecondary),
+                ?.copyWith(color: context.colors.textSecondary),
           ),
         ],
       ),

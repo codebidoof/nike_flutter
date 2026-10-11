@@ -15,7 +15,7 @@ import 'package:flutter/services.dart' hide SystemUiOverlay;
 ///   builder: (context, child) => SystemUiOverlay(
 ///     iconBrightness: Brightness.dark,
 ///     viewPadding: MediaQuery.viewPaddingOf(context),
-///     surface: Theme.of(context).colorScheme.surface,
+///     surface: context.colors.bgDefault,
 ///     child: child!,
 ///   ),
 /// );

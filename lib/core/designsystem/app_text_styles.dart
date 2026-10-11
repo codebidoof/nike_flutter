@@ -5,7 +5,7 @@ import 'tokens/typography_primitives.dart';
 /// Layer 2: 시맨틱 텍스트 스타일.
 ///
 /// 위젯은 이 클래스만 참조한다. 색상은 포함하지 않으므로 사용처에서
-/// `copyWith(color: AppColors.xxx)`로 지정할 것.
+/// `copyWith(color: context.colors.xxx)`로 지정할 것.
 abstract final class AppTextStyles {
   // Title
   static const TextStyle titleL = TextStyle(

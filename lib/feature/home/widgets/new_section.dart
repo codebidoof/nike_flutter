@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../core/designsystem/app_colors.dart';
+import '../../../core/designsystem/color/app_colors.dart';
 import 'new_product_item.dart';
 
 class NewSection extends StatelessWidget {
@@ -18,7 +18,7 @@ class NewSection extends StatelessWidget {
           Text(
             "나이키 최신 상품",
             style: Theme.of(context).textTheme.titleLarge
-                ?.copyWith(color: AppColors.textSecondary),
+                ?.copyWith(color: context.colors.textSecondary),
           ),
           SizedBox(height: 22),
         ],

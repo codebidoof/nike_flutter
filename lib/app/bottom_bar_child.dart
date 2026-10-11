@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../core/designsystem/app_colors.dart';
+import '../core/designsystem/color/app_colors.dart';
 import '../core/designsystem/app_spacing.dart';
 import 'bottom_bar_item.dart';
 
@@ -28,12 +28,13 @@ class BottomBarChild extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // 선택된 탭은 라벨만 Bold + textPrimary, 아이콘은 그대로
+    final colors = context.colors;
     final labelStyle = isSelected
         ? theme.textTheme.labelSmall?.copyWith(
             fontWeight: FontWeight.bold,
-            color: theme.colorScheme.onSurface,
+            color: colors.textPrimary,
           )
-        : theme.textTheme.labelSmall?.copyWith(color: AppColors.textSecondary);
+        : theme.textTheme.labelSmall?.copyWith(color: colors.textSecondary);
 
     return GestureDetector(
       behavior: HitTestBehavior.opaque,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'color/app_colors.dart';
 import 'app_spacing.dart';
 
 /// 화면의 주요 액션에 쓰는 CTA 버튼.
@@ -17,10 +18,13 @@ class CtaButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final colors = context.colors;
 
     return FilledButton(
       onPressed: onPressed,
       style: FilledButton.styleFrom(
+        backgroundColor: colors.bgInverse,
+        foregroundColor: colors.textInverse,
         minimumSize: const Size.fromHeight(_height),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(AppSpacing.ctaButtonRadius),
@@ -29,7 +33,7 @@ class CtaButton extends StatelessWidget {
       child: Text(
         label,
         style: theme.textTheme.labelLarge?.copyWith(
-          color: theme.colorScheme.onPrimary,
+          color: colors.textInverse,
         ),
       ),
     );

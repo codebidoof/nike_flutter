@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../core/designsystem/color/app_colors.dart';
 import 'bottom_bar_child.dart';
 import 'bottom_bar_item.dart';
 
@@ -23,7 +24,7 @@ class BottomBar extends StatelessWidget {
     final theme = Theme.of(context);
 
     return ColoredBox(
-      color: theme.colorScheme.surface,
+      color: context.colors.bgDefault,
       child: SizedBox(
         height: _height,
         child: Padding(

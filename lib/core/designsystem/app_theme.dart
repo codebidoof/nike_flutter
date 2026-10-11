@@ -1,36 +1,31 @@
 import 'package:flutter/material.dart';
 
-import 'app_colors.dart';
+import 'color/app_colors.dart';
 import 'app_text_styles.dart';
+import 'theme/dark_theme.dart';
+import 'theme/light_theme.dart';
 
 class AppTheme {
   const AppTheme._();
 
-  static ThemeData get light => ThemeData(
-    useMaterial3: true,
-    colorScheme: _lightColorScheme,
-    textTheme: _textTheme,
-    scaffoldBackgroundColor: AppColors.textInverse,
-  );
+  static ThemeData get light => _theme(Brightness.light, const LightTheme());
 
-  /// W1에서는 light와 동일하게 유지. 다크 토큰 분리는 추후 진행.
-  static ThemeData get dark => ThemeData(
-    useMaterial3: true,
-    colorScheme: _lightColorScheme,
-    textTheme: _textTheme,
-    scaffoldBackgroundColor: AppColors.textInverse,
-  );
+  /// 다크 토큰이 분리되기 전까지는 brightness도 light로 둔다.
+  static ThemeData get dark => _theme(Brightness.light, const DarkTheme());
 
-  static const ColorScheme _lightColorScheme = ColorScheme(
-    brightness: Brightness.light,
-    primary: AppColors.bgInverse,
-    onPrimary: AppColors.textInverse,
-    secondary: AppColors.indicatorActive,
-    onSecondary: AppColors.textInverse,
-    error: AppColors.iconWishActive,
-    onError: AppColors.textInverse,
-    surface: AppColors.bgDefault,
-    onSurface: AppColors.textPrimary,
+  /// ColorScheme은 Material 위젯 기본값용으로만 두고, 앱 색상은 [AppColors]를 쓴다.
+  static ThemeData _theme(Brightness brightness, AppColors colors) => ThemeData(
+    useMaterial3: true,
+    colorScheme: ColorScheme.fromSeed(
+      seedColor: colors.bgInverse,
+      brightness: brightness,
+    ),
+    textTheme: _textTheme.apply(
+      bodyColor: colors.textPrimary,
+      displayColor: colors.textPrimary,
+    ),
+    scaffoldBackgroundColor: colors.bgDefault,
+    extensions: [colors],
   );
 
   static const TextTheme _textTheme = TextTheme(

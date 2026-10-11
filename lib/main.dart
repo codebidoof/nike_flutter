@@ -3,6 +3,7 @@ import 'package:flutter/services.dart' hide SystemUiOverlay;
 
 import 'app/app_router.dart';
 import 'app/system_ui_overlay.dart';
+import 'core/designsystem/color/app_colors.dart';
 import 'core/designsystem/app_theme.dart';
 
 void main() {
@@ -31,7 +32,7 @@ class _MyAppState extends State<MyApp> {
       routerConfig: router,
       // MaterialApp이 빌드마다 기본 SystemUiOverlayStyle을 덮어쓰므로 위젯 트리에서 지정
       builder: (context, child) {
-        final surface = Theme.of(context).colorScheme.surface;
+        final surface = context.colors.bgDefault;
         final viewPadding = MediaQuery.viewPaddingOf(context);
         final iconBrightness =
             ThemeData.estimateBrightnessForColor(surface) == Brightness.dark
