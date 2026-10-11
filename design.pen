@@ -392,6 +392,7 @@
               "type": "frame",
               "id": "CTbKZ",
               "name": " Navigation / item",
+              "height": 35,
               "layout": "vertical",
               "gap": 3,
               "alignItems": "center",
@@ -6437,6 +6438,7 @@
                           "type": "frame",
                           "id": "MSzHi",
                           "name": "Frame 12",
+                          "width": 309,
                           "layout": "vertical",
                           "gap": 20,
                           "children": [
