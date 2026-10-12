@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:nike_flutter/feature/profile/widget/following_list.dart';
+import 'package:nike_flutter/feature/profile/widget/following_section.dart';
+import 'package:nike_flutter/feature/profile/widget/member_benefit_section.dart';
 import 'package:nike_flutter/feature/profile/widget/menu_section.dart';
 import 'package:nike_flutter/feature/profile/widget/profile_divider.dart';
 import 'package:nike_flutter/feature/profile/widget/profile_section.dart';
@@ -9,7 +12,7 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const SingleChildScrollView(
-      padding: EdgeInsets.symmetric(horizontal: 2),
+      padding: EdgeInsets.only(right: 2, left: 2, bottom: 11),
       child: Column(
         crossAxisAlignment: .center,
         children: [
@@ -19,6 +22,12 @@ class ProfileScreen extends StatelessWidget {
           MenuSection(),
           SizedBox(height: 24,),
           ProfileDivider(),
+          MemberBenefitSection(),
+          ProfileDivider(),
+          SizedBox(height: 28,),
+          FollowingSection(),
+          SizedBox(height: 18,),
+          FollowingList()
         ],
       ),
     );
