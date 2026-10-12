@@ -87,7 +87,8 @@ final GoRouter router = GoRouter(
     // 상품 상세
     GoRoute(
       path: '/product/:id',
-      builder: (context, state) => const ProductDetailScreen(),
+      builder: (context, state) =>
+          ProductDetailScreen(onPressed: () => context.pop()),
     ),
   ],
 );
