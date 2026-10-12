@@ -16,6 +16,7 @@ class ProfileSection extends StatelessWidget {
         const SizedBox(
           width: 84,
           height: 84,
+          // TODO: 추후 네트워크 이미지로 변경 예정
           child: CircleAvatar(radius: 50, child: Icon(Icons.person)),
         ),
         const SizedBox(height: 30),
