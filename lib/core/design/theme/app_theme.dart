@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'color/app_colors.dart';
-import 'theme/dark_theme.dart';
-import 'theme/light_theme.dart';
-import 'typography/app_typography.dart';
+import '../color/app_colors.dart';
+import 'dark_theme.dart';
+import 'light_theme.dart';
+import '../type/app_typography.dart';
 
 class AppTheme {
   const AppTheme._();

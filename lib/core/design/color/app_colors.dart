@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../typography/app_typography.dart';
+import '../type/app_typography.dart';
 
 /// Layer 2: 시맨틱 색상 토큰.
 ///
