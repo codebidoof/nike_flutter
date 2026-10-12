@@ -137,9 +137,19 @@ class ProductItem extends StatelessWidget {
 // design.pen의 그리드 셀 기준 크기
 const Size productItemPreviewSize = Size(184, 337);
 
-// context.appColor / context.appText가 테마 확장을 요구하므로 AppTheme으로 감싼다
-Widget productItemPreviewWrapper(Widget child) =>
-    Theme(data: AppTheme.light, child: child);
+// context.appColor / context.appText가 테마 확장을 요구하므로 AppTheme으로 감싼다.
+// 프리뷰어의 밝기 전환을 따르고, 프리뷰어 배경과 겹치지 않게 bgDefault를 깐다.
+Widget productItemPreviewWrapper(Widget child) => Builder(
+  builder: (context) => Theme(
+    data: MediaQuery.platformBrightnessOf(context) == Brightness.dark
+        ? AppTheme.dark
+        : AppTheme.light,
+    child: Builder(
+      builder: (context) =>
+          ColoredBox(color: context.appColor.bgDefault, child: child),
+    ),
+  ),
+);
 
 @Preview(
   group: 'ProductItem',
