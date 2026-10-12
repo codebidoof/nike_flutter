@@ -19,13 +19,13 @@ class HomeScreen extends StatelessWidget {
           right: 17,
         ),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            TopSection(),
+            Align(alignment: .centerLeft, child: TopSection()),
             SizedBox(height: 44),
             Image.asset("assets/images/home_banner.png"),
             SizedBox(height: 41),
-            NewSection(),
+            Align(alignment: .centerLeft, child: NewSection()),
             SizedBox(
               height: 384,
               child: ListView.separated(

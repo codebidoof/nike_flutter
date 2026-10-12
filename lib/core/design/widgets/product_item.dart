@@ -60,7 +60,7 @@ class ProductItem extends StatelessWidget {
         children: [
           AspectRatio(
             aspectRatio: 1,
-            child: Stack(
+            child: Stack( // 하트 때문에 스택을 쓴다.
               fit: StackFit.expand,
               children: [
                 Image.asset(imagePath, fit: .cover),
