@@ -1,3 +1,6 @@
+/// @docImport '../designsystem/tokens/color_primitives.dart';
+library;
+
 import 'package:flutter/material.dart';
 
 import '../type/app_typography.dart';
@@ -29,32 +32,60 @@ class AppColors extends ThemeExtension<AppColors> {
   });
 
   // Text
+  /// Light · Dark: [ColorPrimitives.black] (#000000)
   final Color textPrimary;
+
+  /// Light · Dark: [ColorPrimitives.gray500] (#767676)
   final Color textSecondary;
+
+  /// Light · Dark: [ColorPrimitives.white] (#FFFFFF)
   final Color textInverse;
+
+  /// Light · Dark: [ColorPrimitives.orange500] (#FC5100)
   final Color textHighlight;
 
   // Background
+  /// Light · Dark: [ColorPrimitives.white] (#FFFFFF)
   final Color bgDefault;
+
+  /// Light · Dark: [ColorPrimitives.gray50] (#F6F6F6)
   final Color bgSubtle;
+
+  /// Light · Dark: [ColorPrimitives.gray250] (#D9D9D9)
   final Color bgPlaceholder;
+
+  /// Light · Dark: [ColorPrimitives.black] (#000000)
   final Color bgInverse;
 
   // Border
+  /// Light · Dark: [ColorPrimitives.gray200] (#E4E4E4)
   final Color borderDefault;
+
+  /// Light · Dark: [ColorPrimitives.black] (#000000)
   final Color borderStrong;
+
+  /// Light · Dark: [ColorPrimitives.gray300] (#CDCDCD)
   final Color borderSubtle;
 
   // Icon
+  /// Light · Dark: [ColorPrimitives.black] (#000000)
   final Color iconPrimary;
+
+  /// Light · Dark: [ColorPrimitives.systemGray] (#3C3C43 @ 60%)
   final Color iconSystem;
+
+  /// Light · Dark: [ColorPrimitives.red500] (#FF0000)
   final Color iconWishActive;
 
   // Indicator
+  /// Light · Dark: [ColorPrimitives.gray300] (#CDCDCD)
   final Color indicatorTrack;
+
+  /// Light · Dark: [ColorPrimitives.gray700] (#57595B)
   final Color indicatorActive;
 
   // Effect
+  /// Light · Dark: [ColorPrimitives.shadow] (#000000 @ 3%)
   final Color shadow;
 
   @override

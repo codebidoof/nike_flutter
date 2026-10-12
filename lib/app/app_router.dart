@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:nike_flutter/app/bottom_bar.dart';
-import 'package:nike_flutter/feature/buy/buy_screen.dart';
+import 'package:nike_flutter/feature/buy/screen/buy_screen.dart';
 import 'package:nike_flutter/feature/profile/profile_screen.dart';
 
 import '../feature/bag/bag_screen.dart';

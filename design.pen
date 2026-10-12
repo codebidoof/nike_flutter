@@ -4048,33 +4048,6 @@
                 },
                 {
                   "type": "frame",
-                  "id": "k7jgqS",
-                  "name": "Tab",
-                  "layout": "vertical",
-                  "gap": 16,
-                  "padding": [
-                    20,
-                    24
-                  ],
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "text",
-                      "id": "MQwkI",
-                      "name": "Men",
-                      "fill": "$text-secondary",
-                      "content": "sale",
-                      "lineHeight": "$tab-line-height",
-                      "textAlign": "center",
-                      "fontFamily": "$font-primary",
-                      "fontSize": "$tab-size",
-                      "fontWeight": "$tab-weight",
-                      "letterSpacing": "$tab-letter-spacing"
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
                   "id": "iTnnE",
                   "x": 264,
                   "y": 0,
@@ -4124,6 +4097,33 @@
                       "name": "Men",
                       "fill": "$text-secondary",
                       "content": "Kids",
+                      "lineHeight": "$tab-line-height",
+                      "textAlign": "center",
+                      "fontFamily": "$font-primary",
+                      "fontSize": "$tab-size",
+                      "fontWeight": "$tab-weight",
+                      "letterSpacing": "$tab-letter-spacing"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "k7jgqS",
+                  "name": "Tab",
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": [
+                    20,
+                    24
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "MQwkI",
+                      "name": "Men",
+                      "fill": "$text-secondary",
+                      "content": "sale",
                       "lineHeight": "$tab-line-height",
                       "textAlign": "center",
                       "fontFamily": "$font-primary",

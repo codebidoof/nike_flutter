@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widget_previews.dart';
 import 'package:nike_flutter/feature/home/widgets/new_section.dart';
 import 'package:nike_flutter/feature/home/widgets/top_section.dart';
 
@@ -26,7 +27,6 @@ class HomeScreen extends StatelessWidget {
             SizedBox(height: 41),
             NewSection(),
             SizedBox(
-              width: 314,
               height: 384,
               child: ListView.separated(
                 separatorBuilder: (context, index) => SizedBox(width: 3),
@@ -42,4 +42,10 @@ class HomeScreen extends StatelessWidget {
       ),
     );
   }
+}
+
+//테스트
+@Preview(name: 'My Sample Text')
+Widget mySampleText() {
+  return const Text('Hello, World!');
 }
