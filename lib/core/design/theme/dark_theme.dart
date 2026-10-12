@@ -1,5 +1,5 @@
 import '../color/app_colors.dart';
-import '../tokens/color_primitives.dart';
+import '../designsystem/tokens/color_primitives.dart';
 
 /// 다크 테마 색상.
 ///

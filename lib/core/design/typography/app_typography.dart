@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../app_text_styles.dart';
+import '../designsystem/app_text_styles.dart';
 
 /// 시맨틱 텍스트 스타일을 테마에 싣는 확장.
 ///

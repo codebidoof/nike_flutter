@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../color/app_colors.dart';
-import '../app_spacing.dart';
+import '../designsystem/app_spacing.dart';
 
 /// 화면의 주요 액션에 쓰는 CTA 버튼.
 ///

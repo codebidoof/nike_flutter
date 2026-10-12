@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../core/designsystem/color/app_colors.dart';
-import '../core/designsystem/app_spacing.dart';
+import '../core/design/color/app_colors.dart';
+import '../core/design/designsystem/app_spacing.dart';
 import 'bottom_bar_item.dart';
 
 class BottomBarChild extends StatelessWidget {

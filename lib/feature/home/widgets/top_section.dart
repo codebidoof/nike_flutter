@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nike_flutter/core/designsystem/color/app_colors.dart';
+import 'package:nike_flutter/core/design/color/app_colors.dart';
 
 class TopSection extends StatelessWidget {
   const TopSection({super.key});

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../core/designsystem/widgets/cta_button.dart';
+import '../../core/design/widgets/cta_button.dart';
 
 class BagScreen extends StatelessWidget {
   const BagScreen({super.key});

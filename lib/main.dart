@@ -3,8 +3,8 @@ import 'package:flutter/services.dart' hide SystemUiOverlay;
 
 import 'app/app_router.dart';
 import 'app/system_ui_overlay.dart';
-import 'core/designsystem/color/app_colors.dart';
-import 'core/designsystem/app_theme.dart';
+import 'core/design/color/app_colors.dart';
+import 'core/design/app_theme.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../core/designsystem/color/app_colors.dart';
+import '../core/design/color/app_colors.dart';
 import 'bottom_bar_child.dart';
 import 'bottom_bar_item.dart';
 
