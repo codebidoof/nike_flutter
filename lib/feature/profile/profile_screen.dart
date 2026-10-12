@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nike_flutter/feature/profile/widget/following_list.dart';
 import 'package:nike_flutter/feature/profile/widget/following_section.dart';
+import 'package:nike_flutter/feature/profile/widget/join_date_section.dart';
 import 'package:nike_flutter/feature/profile/widget/member_benefit_section.dart';
 import 'package:nike_flutter/feature/profile/widget/menu_section.dart';
 import 'package:nike_flutter/feature/profile/widget/profile_divider.dart';
@@ -20,14 +21,16 @@ class ProfileScreen extends StatelessWidget {
           ProfileSection(),
           SizedBox(height: 42),
           MenuSection(),
-          SizedBox(height: 24,),
+          SizedBox(height: 24),
           ProfileDivider(),
           MemberBenefitSection(),
           ProfileDivider(),
-          SizedBox(height: 28,),
+          SizedBox(height: 28),
           FollowingSection(),
-          SizedBox(height: 18,),
-          FollowingList()
+          SizedBox(height: 18),
+          FollowingList(),
+          SizedBox(height: 116),
+          JoinDateSection(joinDate: '2025년 9월'),
         ],
       ),
     );
